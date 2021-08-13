@@ -22,20 +22,31 @@
 
 let analyzeColor = prompt("What is your favorite color?");
 
-switch (analyzeColor) {
-    case 'blue' || 'Blue' :
+    if (analyzeColor.toLowerCase() === 'blue') {
         alert('Blue is the color of the sky!');
-        break;
-    case 'red' || 'Red' :
+    } else if (analyzeColor.toLowerCase() === 'red'){
         alert('Strawberries are red!');
-        break;
-    case 'cyan' || 'Cyan' :
-        alert("I don't know anything about cyan");
-        break;
-    default:
-        alert(color + " is a cool color too!");
-        break;
+} else if (analyzeColor.toLowerCase() === 'cyan'){
+        alert ("I don't know anything about cyan");
+    } else {
+        alert(analyzeColor + " is a cool color too!");
 }
+
+
+// switch (analyzeColor) {
+//     case 'blue' :
+//         alert('Blue is the color of the sky!');
+//         break;
+//     case 'red'  :
+//         alert('Strawberries are red!');
+//         break;
+//     case 'cyan' :
+//         alert("I don't know anything about cyan");
+//         break;
+//     default:
+//         alert(analyzeColor + " is a cool color too!");
+//         break;
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -48,7 +59,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+console.log(randomColor);
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement

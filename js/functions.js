@@ -79,6 +79,9 @@ function calculateTip(x, y){
     var totalBill = y;
     var tipAmount = (x * y);
 
+    // You could've also done: function calculateTip (tipPercentage, totalBill){
+    //                                     return tipPercentage * totalBill }
+
     return (tipAmount);
 }
 /**
