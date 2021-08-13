@@ -20,6 +20,22 @@
  * console.logging the function's return value
  */
 
+let analyzeColor = prompt("What is your favorite color?");
+
+switch (analyzeColor) {
+    case 'blue' || 'Blue' :
+        alert('Blue is the color of the sky!');
+        break;
+    case 'red' || 'Red' :
+        alert('Strawberries are red!');
+        break;
+    case 'cyan' || 'Cyan' :
+        alert("I don't know anything about cyan");
+        break;
+    default:
+        alert(color + " is a cool color too!");
+        break;
+}
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
