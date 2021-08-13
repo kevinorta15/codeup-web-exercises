@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return ("Hello " + name);
+     return ("Hello, " + name + "!");
 }
 /**
  * TODO:
@@ -18,7 +18,8 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-var helloMessage = sayHello(Kevin);
+var helloMessage = sayHello("Kevin");
+
 console.log(helloMessage);
 /**
  * TODO:
@@ -27,6 +28,9 @@ console.log(helloMessage);
  * console.
  */
 
+var myName = "Kevin Orta"
+
+console.log(sayHello(myName));
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -48,6 +52,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(x){
+    if (x === 2){
+        return true
+    } else {
+    return false }
+}
+
+
+console.log(isTwo(random));
+
 
 /**
  * TODO:
@@ -60,14 +74,23 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(x, y){
+    var tipPercentage = x;
+    var totalBill = y;
+    var tipAmount = (x * y);
 
+    return (tipAmount);
+}
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var tipPercentage = (parseFloat(prompt("What tip percentage would you like to leave?"))/100);
+var totalBill = parseFloat(prompt("What was your total bill amount?"));
 
+    alert("You should tip: " + "$" + (tipPercentage * totalBill));
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -82,3 +105,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(x,y) {
+    var priceBefore = x;
+    var discountPerc = (y/100);
+    var totalAmount = (priceBefore * discountPerc);
+    return totalAmount
+}
+
