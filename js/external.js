@@ -51,7 +51,15 @@ if (items == false){
         alert("Sweet! Let's save you some money!")
     }
 
+/*
+Another possible solution:
 
+var productQuantity = parseInt(prompt("How many items are in your cart?"));
+var member = confirm("Are you a premium member?")
+var offerValid = confirm("Is the offer still valid?")
+
+console.log( "Is the discount available? " + ((productQuantity > 2 || member) && offerValid))
+ */
 
 
 
