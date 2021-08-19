@@ -8,29 +8,34 @@
 //
 // while (areWeThereYet) {
 //     areWeThereYet = confirm("Are we there yet?");
-}
+// }
 
 // In the above example, we'll continue to prompt the user asking if we're there yet until we finally get
 // a positive confirmation. While the condition is not true (!areWeThereYet), do some stuff (from the body of the loop)
 
-var haveToy = confirm("Can I have the toy, please?!");
+// var haveToy = confirm("Can I have the toy, please?!");
 
 // alert("Hey, it is " + haveToy + " that you can have the toy");
 // How can we use this variable + boolean inside the while loop?
 
-while (!haveToy){
-    haveToy = confirm("PLEASEEEEEEEE can I have the toy?");
-}
-
-if (haveToy){
-    alert("Thanks pops! You're the best!");
-}
+// while (!haveToy){
+//     haveToy = confirm("PLEASEEEEEEEE can I have the toy?");
+// }
+//
+// if (haveToy){
+//     alert("Thanks pops! You're the best!");
+// }
 // Notice that much like an if statement, our while loop will only run if the initial condition is met.
 // If we give Codie the toy from the get go, we won't see the behavior in the loop at all.
 
 // TODO: Quasar~ create a WHILE loop that runs as long as i is less than 10;
 
-
+// var i = 0
+//
+// while (i < 10){
+//     console.log("Iteration #" + i);
+//     i++
+// }
 //~*~ Do-While Loops ~*~
 
 
@@ -53,15 +58,31 @@ if (haveToy){
 
 // Notice that even with a condition that has a boolean value of false, the do while loop will run one time be for stopping.
 
-
+// do {
+//     var secret = prompt("What is the secret password?");
+// } while (secret !== "sesame")
 
 // We can also use what we've learned above within the body of your functions:
 
-
+// function dowhilemultiplybytwo(num) {
+//
+//     do {
+//         num = num * 2;
+//         console.log(num);
+//     } while (num < 100)
+//
+// }
+//
+// function whilemultiplybytwo (num){
+//     while (num < 100){
+//         num = num * 2;
+//         console.log(num);
+//     }
+// }
 // For loops: Loops that are designed to run a given number of times. Think more math thinking.
 
-// for (var incrementer = 1; incrementer <= 10; incrementer++) {
-//     console.log("This loop has run " + incrementer + " time(s).");
+for (var incrementer = 1; incrementer <= 10; incrementer++) {
+    console.log("This loop has run " + incrementer + " time(s).");
 // }
 
 // The for loop has more to it as you can see. Let's break down the arguments:
@@ -76,14 +97,16 @@ if (haveToy){
 
 // And we can use this with conditionals!
 
-// for (var i = 1; i < 25; i++){
-//     if (i % 6 == 0) console.log("Codeup");
-//     else if (i % 2 == 0) console.log("Code");
-//     else if (i % 3 == 0) console.log("Up");
-//     else console.log(i);
-// }
+for (var i = 1; i < 25; i++){
+    if (i % 6 == 0) console.log("Codeup");
+    else if (i % 2 == 0) console.log("Code");
+    else if (i % 3 == 0) console.log("Up");
+    else console.log(i);
+}
 
 // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
+i = 0
+
 
 // Below is a funky example that works, but will rely on moving between different data types.
 // for (var i = "A"; i.length < 8; i = i + "A") {
@@ -116,15 +139,15 @@ if (haveToy){
 
 // we can also use continue to allow a loop to skip an iteration.
 
-function allOddNumbersToX (x) {
-    for (var i = 0; i <= x; i++) {
-        if (i % 2 === 0) {
-            continue;
-        }
-        console.log(i);
-    }
-    return x;
-}
+// function allOddNumbersToX (x) {
+//     for (var i = 0; i <= x; i++) {
+//         if (i % 2 === 0) {
+//             continue;
+//         }
+//         console.log(i);
+//     }
+//     return x;
+// }
 
 // allOddNumbersToX(17);
 // allOddNumbersToX(18);
