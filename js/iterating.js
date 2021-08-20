@@ -40,8 +40,8 @@ for ( var i = 0; i < names.length; i++){
   // When using a forEach, you put in a function with a single item from the array, i.e name(s) array, singular name, dog(s) array, singular dog,
 
     // This is the way that Joanna did it: Why does taking the S off of the string name work? Does Javascript understand plural?
-    names.forEach(function (color){
-        console.log("This is the names array: " + color)
+    names.forEach(function (name){
+        console.log("This is a single item of the names array: " + name)
     });
     /**
      * TODO:
