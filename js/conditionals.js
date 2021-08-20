@@ -20,20 +20,24 @@
  * console.logging the function's return value
  */
 
-let analyzeColor = prompt("What is your favorite color?");
+// EXAMPLE 1
 
-    if (analyzeColor.toLowerCase() === 'blue') {
-        alert('Blue is the color of the sky!');
-    } else if (analyzeColor.toLowerCase() === 'red'){
-        alert('Strawberries are red!');
-} else if (analyzeColor.toLowerCase() === 'cyan'){
-        alert ("I don't know anything about cyan");
-    } else {
-        alert(analyzeColor + " is a cool color too!");
-}
+let favoriteColor = prompt("What is your favorite color?");
+//
+   function analyzeColor() {
+       if (favoriteColor.toLowerCase() === 'blue') {
+           alert('Blue is the color of the sky!');
+       } else if (favoriteColor.toLowerCase() === 'red'){
+           alert('Strawberries are red!');
+       } else if (favoriteColor.toLowerCase() === 'cyan'){
+           alert ("I don't know anything about cyan");
+       } else {
+           alert(favoriteColor + " is a cool color too!");
+       }
+   }
 
 
-switch (analyzeColor) {
+switch (favoriteColor) {
     case 'blue' :
         alert('Blue is the color of the sky!');
         break;
@@ -44,9 +48,9 @@ switch (analyzeColor) {
         alert("I don't know anything about cyan");
         break;
     default:
-        alert(analyzeColor + " is a cool color too!");
+        alert(favoriteColor + " is a cool color too!");
         break;
-
+}
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -65,18 +69,23 @@ function showmemyColor() {
     }
 }
 
-console.log(showmemyColor());
+        console.log(showmemyColor());
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
+switch (colors) {
+    default: (randomColor + ' is such a great color!');
+    break;
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+//SEE EXAMPLE 1 FOR ANSWER BUT INSERT ALERT
 
 /* ########################################################################## */
 
@@ -99,7 +108,27 @@ console.log(showmemyColor());
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var totalAmount = parseFloat(prompt("How much is your total today?"));
+var luckyNumbers = parseFloat(prompt("What was your 'lucky number?"));
 
+function calculateTotal(luckyNumbers,totalAmount) {
+
+    if (luckyNumbers === 5) {
+        return 0;
+    } else if (luckyNumbers === 0) {
+        return totalAmount
+    } else if (luckyNumbers === 1){
+        return (totalAmount- (totalAmount * .10));
+    } else if (luckyNumbers === 2){
+        return (totalAmount-(totalAmount * .20));
+    } else if (luckyNumbers === 3){
+        return (totalAmount- (totalAmount * .35));
+    } else if (luckyNumbers === 4){
+        return (totalAmount- (totalAmount * .50));
+    }
+}
+
+alert( "Your total amount is: $" + calculateTotal(luckyNumbers, totalAmount));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -108,7 +137,14 @@ console.log(showmemyColor());
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var newTotal = parseInt(prompt("What is your bill total?"));
+
+ alert("Your lucky number was: " + luckyNumber + ". " + "Your bill before the discount is: $" +
+    newTotal + "." + "Your new price after the discount is: $" + calculateTotal(luckyNumber, newTotal));
+
+// alert(calculateTotal(luckyNumbers, totalAmount));
 
 /**
  * TODO:
@@ -126,3 +162,29 @@ console.log(showmemyColor());
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var RedPillBluePill= confirm("Would you like to enter a number?")
+
+function chooseaNumber(){
+    if (RedPillBluePill === true) {
+        var randomNumber = parseInt(prompt("Great! What number would you like to choose?"))
+
+        if (randomNumber % 2 == 0){
+             alert("Your number is even!")
+        } else if (randomNumber % 2 !== 0)
+            alert("Your number is odd!")
+
+            alert(randomNumber + " + 100 is: " + (randomNumber + 100));
+        if (randomNumber > 0 ){
+            alert("Your number is positive!")
+        } else if (randomNumber < 0){
+            alert("Your number is negative!")
+        } else {
+            alert("0 is not a positive or a negative number")
+        }
+
+    } else (alert("Oh... well okay, suit yourself."));
+}
+
+chooseaNumber();
+
