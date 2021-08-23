@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 
     /**
@@ -11,9 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-var person = {};
-    person.firstName = "Kevin";
-        person.lastName = "Orta";
+    var person = {
+        firstName: "Kevin",
+        lastName: "Orta"
+    }
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -23,8 +25,8 @@ var person = {};
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-function sayHello(){
-    console.log("Hello from " + this.firstName +" " +  this.lastName);
+    person.sayHello = function(){
+        return "Hello from " + person.firstName + " " + person.lastName
     }
 
     console.log(person.sayHello());
@@ -42,12 +44,27 @@ function sayHello(){
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+        // array.forEach(function(element, index, array){}
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+// var discountAmount = shoppers.amount * 0.12
+//     var totalAfterDiscount = (shoppers.amount - discountAmount)
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+    shoppers.forEach(function (shopper){
+
+        var discountAmount = shopper.amount * 0.12;
+        var totalAfterDiscount = (shopper.amount - discountAmount);
+
+        if (shopper.amount < 200) {
+            console.log("Sorry, " + shopper.name + ", no discount today! Your total is: " + shopper.amount);
+        } else if (shopper.amount >= 200)
+        { console.log("Hello " + shopper.name + ", your amount before discount is " + shopper.amount + ". " + "Your discount of 12% is " + discountAmount + ", with this discount, your new total is: " + totalAfterDiscount);
+        }
+    })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -61,7 +78,25 @@ function sayHello(){
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+var books = [
+    { title: "Intro to Arrays",
+        author:
+            {firstName: "Kenneth", lastName: "Howell"}},
+        {title: "A Guide to Rubber Ducking",
+            author:
+                { firstName:"ShanShan", lastName: "the GOAT"}},
+        {title: "Into the Wind the Functions Go",
+            author:
+                {firstName: "Kevin", lastName: "Orta"}},
+        {title: "A Wrinkle in the Code",
+        author:
+            {firstName: "Joanna", lastName: "Foss"}},
+        {title: "As Far as the Eye Can Code",
+        author:
+            {firstName: "Abraham", lastName: "Lincoln"}}
+    ]
 
+// console.log(books[3].title);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -86,6 +121,10 @@ function sayHello(){
      *      ---
      *      ...
      */
+    var booksLength = books.length;
+for (var i = 0; i < booksLength; i++){
+    console.log("Book #" + [i] + "\n" + "Title: " + books[i].title + '\n' + "Author: " + books[i].author.firstName + " " + books[i].author.lastName + "\n" + "---") ;
+}
 
     /**
      * Bonus:
@@ -98,4 +137,4 @@ function sayHello(){
      *   `showBookInfo` function.
      */
 
-})();
+// })();
