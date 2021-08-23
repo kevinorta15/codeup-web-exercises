@@ -18,10 +18,10 @@ var names = ['Kevin', 'Kenneth', 'Joanna', 'Patric'];
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-console.log("This first shape is: " + names[0]);
-    console.log("This second shape is: " + names[1]);
-    console.log("This third shape is: " + names[2]);
-    console.log("This fourth shape is: " + names[3]);
+console.log("This first name is: " + names[0]);
+    console.log("This second name is: " + names[1]);
+    console.log("This third name is: " + names[2]);
+    console.log("This fourth name is: " + names[3]);
 
 
     /**
@@ -40,8 +40,8 @@ for ( var i = 0; i < names.length; i++){
   // When using a forEach, you put in a function with a single item from the array, i.e name(s) array, singular name, dog(s) array, singular dog,
 
     // This is the way that Joanna did it: Why does taking the S off of the string name work? Does Javascript understand plural?
-    names.forEach(function (color){
-        console.log("This is the names array: " + color)
+    names.forEach(function (name){
+        console.log("This is a single item of the names array: " + name)
     });
     /**
      * TODO:
@@ -61,19 +61,19 @@ for ( var i = 0; i < names.length; i++){
     console.log(fruits.length);
 
     function firstFruit(){
-        console.log(fruits[0]);
+       return fruits[0];
     }
 
     firstFruit();
 
     function secondFruit(){
-        console.log(fruits[2]);
+        return fruits[2];
     }
 
-secondFruit();
+    secondFruit();
 
     function lastFruit(){
-        console.log(fruits[4]);
+        return fruits[4];
     }
 
     lastFruit();

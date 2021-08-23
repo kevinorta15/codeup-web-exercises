@@ -34,6 +34,24 @@ for (var i = 0; i < 9; i++) {
     console.log(numbers[i] + '\n');
 }
 
+
+/*
+function numTriangle (){
+for (var i = 1; i < 10; i++){
+    var output = "";
+
+    for (var j = 0; j < i; j++) {
+    }
+    console.log(output);
+    }
+
+    OR
+
+    for (let i = 1; i < 10; i++) {
+    console.log(i.tostring().repeat(i));
+    }
+ */
+
 // var i, j;
 // for(i = 1; i <= 9; i++)
 // {

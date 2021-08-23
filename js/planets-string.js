@@ -1,5 +1,4 @@
-(function(){
-    "use strict";
+"use strict";
 
     var planetsStrings = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
 
@@ -24,8 +23,14 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-var planetsNewString = planetsArray.join('<br>');
+    var planetsNewString = planetsArray.join('<br>');
     console.log(planetsNewString);
 
 //BONUS:
 
+    var planetsBrTag = planetsArray.join("<br>");
+
+        console.log(planetsBrTag);
+
+var planetsHTML = '<ul><li>' + planetsArray.join('<li></li>') + "</li></ul>";
+        console.log(planetsHTML);
