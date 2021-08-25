@@ -199,12 +199,40 @@ console.log(addUp(1));
 //  * If a binary conversion for 0 is attempted, return "0".
 //  */
 
-var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+//
+// function cleanPhoneNumbers(phoneNumberString){
+//     var cleanedPhoneNumbers = [];
+//
+//     //Split string into individual phone numbers
+//     var phoneNumberArr = phoneNumberString.split('\n')
+// }
+// console.log(phoneNumbers);
 
-function cleanPhoneNumbers(phoneNumberString){
-    var cleanedPhoneNumbers = [];
+// function rollSixSided(){
+// return math.floor(math.random() * 6) +1
+// }
+//
+// for (let i = 0; i < 5; i++) {
+//     console.log("You rolled a " + rollSixSided())
+// }
+//
+// function rollDie() {
+//     return Math.floor(Math.random() * 6);
+// }
+function rollSixSided(input) {
 
-    //Split string into individual phone numbers
-    var phoneNumberArr = phoneNumberString.split('\n')
+    for (var i = 0; i < input; i++) {
+
+        var random = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+
+        console.log("You have rolled: " + random)
+    }
 }
-console.log(phoneNumbers);
+
+console.log(rollSixSided(10));
+
+
+
+
+
