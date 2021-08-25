@@ -1,32 +1,32 @@
 // Make a function called returnTwo() that returns the number 2 when called
-function returnTwo(){
-    return 2
-}
+// function returnTwo(){
+//     return 2
+// }
 // Test this function with console.log(returnTwo())
 //     Make a function called sayHowdy() which console.logs the string “Howdy!”
 
-function sayHowdy(){
-    console.log("Howdy!");
-}
+// function sayHowdy(){
+//     console.log("Howdy!");
+// }
 //     Test this function by directly calling sayHowdy()
 // Remember this function does not need a defined return value
 // Make a function called returnName() that returns the string of your name
-function returnName(){
-    return ("Kevin")
-}
+// function returnName(){
+//     return ("Kevin")
+// }
 // Test this function with console.log(returnName())
 //     Make a function called addThree() which takes in a number input and returns the number plus 3.
 // Test this function with console.log(addThree(5))
-function addThree(x){
-    return x + 3
-}
+// function addThree(x){
+//     return x + 3
+// }
 //     Make a function called sayString() which returns the string input passed in.
 // Test this function with console.log(sayString('codeup'))
-function sayString(input){
-    console.log("This is your word: " + input);
-}
-
-console.log(sayString("codeup"));
+// function sayString(input){
+//     console.log("This is your word: " + input);
+// }
+//
+// console.log(sayString("codeup"));
 
 //     Challenge Function Drills
 // Write a function called identity(input) that takes in an argument called input and returns that input.
@@ -67,13 +67,13 @@ console.log(sayString("codeup"));
 // /**
 
 // A Possible Formula: value * (value + 1) / 2
-function addUp(value){
-    if (value == 1){
-        return 1
-    } else {
-        return value + addUp(value - 1);
-    }
-}
+// function addUp(value){
+//     if (value == 1){
+//         return 1
+//     } else {
+//         return value + addUp(value - 1);
+//     }
+// }
 
 /*function addUp(4){
    if(4 ==1){
@@ -111,6 +111,16 @@ console.log(addUp(1));
 //  */
 //
 // /**
+
+function charCount(userString, letter){
+    var str = userString.toLowerCase();
+    var lttr = letter.toLowerCase();
+
+    return str.split(lttr).length-1;
+}
+
+console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
+
 //  * TODO:
 //  * Return the Index of the First Vowel
 //  * Create a function named firstVowel that returns the index of the first vowel in a string.
@@ -220,17 +230,17 @@ console.log(addUp(1));
 // function rollDie() {
 //     return Math.floor(Math.random() * 6);
 // }
-function rollSixSided(input) {
-
-    for (var i = 0; i < input; i++) {
-
-        var random = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-
-        console.log("You have rolled: " + random)
-    }
-}
-
-console.log(rollSixSided(10));
+// function rollSixSided(input) {
+//
+//     for (var i = 0; i < input; i++) {
+//
+//         var random = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+//
+//         console.log("You have rolled: " + random)
+//     }
+// }
+//
+// console.log(rollSixSided(10));
 
 
 
