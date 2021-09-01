@@ -1,0 +1,17 @@
+.fancy-header{
+    color: purple;
+}
+
+body {
+    color: white;
+    background: black;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    color: green;
+    text-decoration: underline;
+}
