@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <title>Register With Us</title>
 </head>
+<style>
+    h1 {text-align: center}
+    h3 {color: greenyellow}
+    h1 {color: greenyellow}
+    label {color: white}
+</style>
 <body>
-<h1><em>FORMS, LOGINS, and MORE...</em></h1>
+<body style="background-color: grey"></body>
+<h1>Begin Your Journey with <em>Veridian Dynamics</em></h1>
 <form method="POST" action="https://request-inspector.glitch.me/">
 <!--    <label for="username">Email</label>-->
     <h3>Let's login!</h3>
-    <input id="username" name="username" type="text" placeholder="Please Enter Email">
+    <label for="email">Email</label>
+    <input id="email" name="username" type="text" placeholder="Please Enter Email">
     <br><br>
-<!--    <label for="password">Password</label>-->
+    <label for="password">Password</label>
     <input id="password" name="password" type="password" placeholder="Please Insert Password">
     <br><br>
     <input type="submit">
@@ -35,9 +43,11 @@
     <br>
     <h3>What browser are you currently using?</h3>
     <select name="browser_use">
+        <option value="" disabled>--Please choose an options--</option>
         <option value="Safari">Safari</option>
         <option value="Chrome">Google Chrome</option>
         <option value="Firefox">Firefox</option>
+        <option value="Internet Explorer">Internet Explorer</option>
     </select>
 </form>
 </body>
