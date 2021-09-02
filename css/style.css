@@ -3,7 +3,7 @@
 }
 
 body {
-    color: white;
+    color: black;
     background: black;
 }
 
@@ -12,6 +12,31 @@ h2{
 }
 
 h3{
-    color: green;
+    color: red;
     text-decoration: underline;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+/*table, th, td {*/
+/*    border: 20px solid black;*/
+/*    padding: 10px;*/
+/*}*/
+
+a:visited {
+    color: orange;
+}
+
+body {
+    background-image: url("/img/pexels-henry-&-co-1939485.jpg");
 }
