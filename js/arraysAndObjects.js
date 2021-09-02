@@ -279,9 +279,9 @@
  * >> convertAddressToObject('8626 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
  */
-function convertAddressToObject(str){
-
-}
+// function convertAddressToObject(str){
+//
+// }
 
 /**
  * Count total pets
@@ -295,3 +295,19 @@ function convertAddressToObject(str){
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
+
+function tellFortune(children,partner,place,job){
+console.log ("You will be a " + job + ", " + "with " + children + " children, " + "living in " + place + ", " + " while being married to " + partner + ".")
+}
+
+tellFortune(4, "Kayla", "Denver", "Web Developer");
+tellFortune(2, "Katia", "New York", "Baseball Player");
+
+function calculateDogAge(humanYears){
+    var dogYears = humanYears * 7
+    console.log("Your dog is " + dogYears + " in dog years!")
+}
+
+// console.log(calculateDogAge(4));
+calculateDogAge(6);
+calculateDogAge(2)
