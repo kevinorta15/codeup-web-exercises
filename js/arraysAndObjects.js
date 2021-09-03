@@ -311,3 +311,11 @@ function calculateDogAge(humanYears){
 // console.log(calculateDogAge(4));
 calculateDogAge(6);
 calculateDogAge(2)
+
+function calculateSupply(age,amount){
+    var lifetime = parseFloat((100- age) * (amount * 365));
+
+    return ("You will need " + lifetime + " of your favorite snack " + "to last you until the ripe age of " + 100);
+}
+
+console.log(calculateSupply(25, 4));
