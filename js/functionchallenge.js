@@ -137,8 +137,12 @@ console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
 //  * "y" is not considered a vowel.
 //  * Input always contains a vowel.
 //  */
-// ​
-// ​
+function firstVowel(str){
+    var stringCase = str.toLowerCase()
+for (var i = 0; i < stringCase.length; i++ ){
+    return stringCase[1].charAt(1)
+}
+}
 // /**
 //  * TODO:
 //  * Integer Digits Count
