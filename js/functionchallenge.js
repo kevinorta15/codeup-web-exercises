@@ -140,9 +140,10 @@ console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
 function firstVowel(str){
     var stringCase = str.toLowerCase()
 for (var i = 0; i < stringCase.length; i++ ){
-    return stringCase[1].charAt(1)
+    console.log(stringCase[i].charAt(1));
 }
 }
+
 // /**
 //  * TODO:
 //  * Integer Digits Count
