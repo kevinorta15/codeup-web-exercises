@@ -11,7 +11,7 @@ h1 {text-align: center;}
 
 h2, h3 {
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0;
 }
 
 .container {
@@ -33,33 +33,40 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    /*display: flex;*/
     /* enter needed declarations here */
 }
 
 section {
+    display: flex;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+    justify-content: space-between;
+    align-items: center;
     /* enter needed declarations here */
 }
 section:nth-of-type(1) div:last-child {
-    /* enter needed declarations here */
+align-self: baseline;    /* enter needed declarations here */
 }
 
 .purple-box {
     background: fuchsia;
     width: 3em;
     height: 1em;
+    margin: 0.5em 0;
 }
 
 .purple-box:nth-of-type(1) {
+    flex-grow: 3;
     /* enter needed declarations here */
 }
 
 .purple-box:nth-of-type(2) {
+    flex-grow: 2;
     /* enter needed declarations here */
 }
 
@@ -70,13 +77,19 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
+    margin: 1em 0;
+    /*align-items: flex-end;*/
+    justify-content: flex-end;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(3) h3 {
+        align-self: flex-start;
+    flex-grow: 1;
+    /*margin-right: auto;*/
     /* enter needed declarations here */
-
 }
+
 
 .orange-circle {
     background: orange;
@@ -88,16 +101,20 @@ section:nth-of-type(3) h3 {
 
 .large-brown-box {
     height: 5em;
-    width: 5em;
+    width: 7em;
     background: brown;
+    align-self: center;
     /* enter needed declarations here */
 }
 
 .large-brown-box:nth-of-type(2) {
     margin: 0 1em;
+    align-self: stretch;
 }
 
 section:nth-of-type(5) {
+    justify-content: space-evenly;
+    margin: 1em 0;
     /* enter needed declarations here */
 }
 
@@ -110,6 +127,10 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
+    flex-wrap: wrap;
+    /*align-content: stretch;*/
+    justify-content: space-between;
+    align-items: flex-end;
     /* enter needed declarations here */
 }
 
