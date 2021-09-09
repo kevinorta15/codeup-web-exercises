@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+div {
+    background: grey;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: 'Work-Sans', sans-serif;
+}
+div a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Work-Sans', sans-serif;
+    display: inline-block;
+    padding: 1em;
+    margin: 0;
+}
+div a:hover {
+    background: white;
+    color: blue;
+}
+
+.logo {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 3em;
+    padding: 0.2em 0;
+    margin: 0;
+    /*align-items: center;*/
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
