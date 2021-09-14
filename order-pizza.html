@@ -49,15 +49,83 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Garlic seasoned crust, with a rich, buttery taste.</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+                        <li class="list-group-item"><input type="radio" id="small" name="size" value="small-hand"> Small (10')</li>
+                        <li class="list-group-item"><input type="radio" id="medium" name="size" value="medium-hand"> Medium (12')</li>
+                    </ul>
+                    <br>
+                    <div class="card-header">Crispy Thin</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
+                        <li class="list-group-item"><input type="radio" id="small-crispy" name="size" value="small-crispy"> Small  (10')</li>
+                        <li class="list-group-item"><input type="radio" id="medium-crispy" name="size" value="medium-crispy"> Medium (12')</li>
+                        <br>
                     </ul>
                 </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-primary button-next">Next Step ></a>
+                    </div>
                 </ul>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Cheese & Sauce</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Toppings</div>
-        </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <ul class="list-group">
+                        <li class="list-group-item active">Choose Cheese & Sauce</li>
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header">
+                                Cheese
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item how-much-cheese">How much? <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Choose...</option>
+                                        <option value="1">Light</option>
+                                        <option value="2">Medium</option>
+                                        <option value="3">Heavy</option>
+                                    </select>
+                                </div>
+                                </li>
+                            </ul>
+                                <div class="card-header">
+                                    Sauce
+                                </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item how-much-cheese">What type? <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Choose...</option>
+                                        <option value="tomato">Tomato</option>
+                                        <option value="alfredo">Alfredo</option>
+                                        <option value="none">None</option>
+                                    </select>
+                                </div>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item how-much-cheese">How much? <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Choose...</option>
+                                        <option value="1">Light</option>
+                                        <option value="2">Medium</option>
+                                        <option value="3">Heavy</option>
+                                    </select>
+                                </div>
+                                </li>
+                            </ul>
+                            <div class="card-footer text-muted">
+                                <a href="#" class="btn btn-primary button-previous">< Previous Step</a><a href="#" class="btn btn-primary button-next"> Next Step ></a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <ul class="list-group">
+                        <li class="list-group-item active">Choose Toppings</li>
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header">
+                                Cheese
+                            </div>
+                        </div>
+                    </ul>
+                </div>
 
 
 

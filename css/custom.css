@@ -48,6 +48,10 @@ nav:nth-of-type(2){
     font-weight: bold;
 }
 
+.button-next {
+    float: right;
+}
+
 @media screen and (max-width: 600px) {
     .jumbotron {
         display: none;
