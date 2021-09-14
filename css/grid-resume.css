@@ -1,0 +1,18 @@
+.duck-header {
+    font-size: xxx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-header {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul, .statement {
+    list-style-type: none;
+    text-align: center;
+}
+
+
