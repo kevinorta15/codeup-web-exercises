@@ -248,6 +248,24 @@ for (var i = 0; i < stringCase.length; i++ ){
 // console.log(rollSixSided(10));
 
 
+// TODO: Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word ‘taco’ in its value.
+var hasTacos = ["blueberry muffin”, “banana”, “yogurt”, “cereal”, “brisket and egg taco"];
+var noTacos = ["parfait”, “omlette de frumage”, “protein shake”, “fasting"];
 
+function tacoTuesday(arr) {
+
+
+
+    for (var i = 0; i < arr.length; i++){
+        // for (var j = 0; j < hasTacos[i].length; j++)
+        if (arr[i].includes("taco")){
+            return true;
+        }
+    }
+    return false
+}
+
+console.log(tacoTuesday(hasTacos)); //true
+console.log(tacoTuesday(noTacos)); //false
 
 
