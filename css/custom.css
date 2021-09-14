@@ -1,0 +1,55 @@
+/*.container {*/
+/*    position: relative;*/
+/*    text-align: center;*/
+/*    color: black;*/
+/*}*/
+
+/*.centered {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    font-size: ;*/
+/*}*/
+
+.nav-link {
+    color: black;
+}
+
+nav:nth-of-type(2){
+    display: flex;
+}
+.form-inline {
+    flex-grow: 3;
+}
+
+.welcome-to-pizza-world {
+    padding: 0;
+    background-image: url("../img/pizza.png");
+    background-size: 100%;
+    min-height: 10em;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+}
+
+.jumbotron> h1 {
+    font-weight: bold;
+    text-align: center;
+    opacity: 80%;
+    background-color: beige;
+    width: 100%;
+    font-size: xx-large;
+}
+
+.pizza-head {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron {
+        display: none;
+    }
+}
