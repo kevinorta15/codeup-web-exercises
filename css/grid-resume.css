@@ -10,9 +10,14 @@
     text-align: center;
 }
 
-ul, .statement {
+.statement {
     list-style-type: none;
     text-align: center;
+}
+
+.green-line {
+    border: 5px solid darkolivegreen;
+    border-radius: 2.5px;
 }
 
 
