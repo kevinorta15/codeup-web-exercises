@@ -112,14 +112,14 @@ console.log(addUp(1));
 //
 // /**
 
-function charCount(userString, letter){
-    var str = userString.toLowerCase();
-    var lttr = letter.toLowerCase();
-
-    return str.split(lttr).length-1;
-}
-
-console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
+// function charCount(userString, letter){
+//     var str = userString.toLowerCase();
+//     var lttr = letter.toLowerCase();
+//
+//     return str.split(lttr).length-1;
+// }
+//
+// console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
 
 //  * TODO:
 //  * Return the Index of the First Vowel
@@ -137,12 +137,12 @@ console.log(charCount( "The Creative Class of CodeUp Animals", "A"));
 //  * "y" is not considered a vowel.
 //  * Input always contains a vowel.
 //  */
-function firstVowel(str){
-    var stringCase = str.toLowerCase()
-for (var i = 0; i < stringCase.length; i++ ){
-    console.log(stringCase[i].charAt(1));
-}
-}
+// function firstVowel(str){
+//     var stringCase = str.toLowerCase()
+// for (var i = 0; i < stringCase.length; i++ ){
+//     console.log(stringCase[i].charAt(1));
+// }
+// }
 
 // /**
 //  * TODO:
@@ -248,24 +248,36 @@ for (var i = 0; i < stringCase.length; i++ ){
 // console.log(rollSixSided(10));
 
 
-// TODO: Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word ‘taco’ in its value.
-var hasTacos = ["blueberry muffin”, “banana”, “yogurt”, “cereal”, “brisket and egg taco"];
-var noTacos = ["parfait”, “omlette de frumage”, “protein shake”, “fasting"];
+// // TODO: Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word ‘taco’ in its value.
+// var hasTacos = ["blueberry muffin”, “banana”, “yogurt”, “cereal”, “brisket and egg taco"];
+// var noTacos = ["parfait”, “omlette de frumage”, “protein shake”, “fasting"];
+//
+// function tacoTuesday(arr) {
+//
+//
+//
+//     for (var i = 0; i < arr.length; i++){
+//         // for (var j = 0; j < hasTacos[i].length; j++)
+//         if (arr[i].includes("taco")){
+//             return true;
+//         }
+//     }
+//     return false
+// }
+//
+// console.log(tacoTuesday(hasTacos)); //true
+// console.log(tacoTuesday(noTacos)); //false
 
-function tacoTuesday(arr) {
+function logEvens(input){
 
-
-
-    for (var i = 0; i < arr.length; i++){
-        // for (var j = 0; j < hasTacos[i].length; j++)
-        if (arr[i].includes("taco")){
-            return true;
+    for (var i = 2; i <= input; i++){
+        if (i % 2 === 0){
+            console.log(i)
         }
     }
-    return false
 }
 
-console.log(tacoTuesday(hasTacos)); //true
-console.log(tacoTuesday(noTacos)); //false
+logEvens(20);
+
 
 
