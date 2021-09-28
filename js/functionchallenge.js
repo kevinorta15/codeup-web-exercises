@@ -268,16 +268,29 @@ console.log(addUp(1));
 // console.log(tacoTuesday(hasTacos)); //true
 // console.log(tacoTuesday(noTacos)); //false
 
-function logEvens(input){
+// function logEvens(input){
+//
+//     for (var i = 2; i <= input; i++){
+//         if (i % 2 === 0){
+//             console.log(i)
+//         }
+//     }
+// }
+//
+// logEvens(20);
 
-    for (var i = 2; i <= input; i++){
+function logNum(input){
+    for (var i = 1; i <= input; i++){
         if (i % 2 === 0){
-            console.log(i)
+            console.log(i + " is an even number")
+        } else {
+            console.log (i + " is an odd number")
         }
     }
 }
 
-logEvens(20);
+logNum(10);
+
 
 
 
