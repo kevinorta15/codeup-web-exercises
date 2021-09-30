@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oh the places you'll go...</title>
+</head>
+<style>
+    .invisible {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility: visible;
+    }
+
+    .highlight {
+        background-color: #F0A500;
+    }
+
+    .bodycolor {
+        background-color: #334756;
+    }
+
+    .dtcolor {
+        background-color: #082032;
+    }
+</style>
+<body>
+<h3>Journey with me to the ROK</h3>
+
+<dl>
+    <dt>First of all, what is the ROK?</dt>
+    <dd>The ROK is the Republic of Korea, AKA, one of the most exciting and innovative places on earth!</dd>
+
+    <dt>Innovative you say? How so? </dt>
+    <dd>Korea, second to Israel, spends the most amount of money on R&D to help fund huge companies while shielding them from competition, take Samsung for example.</dd>
+
+    <dt>I like innovation, but what else separates it?</dt>
+    <dd>Well, do you like food?! Korean barbecue is an iconic culinary phenomenon and a social event at the same time. As you are chatting with friends or family, the meats and side dishes are grilled on top of your table, creating a scent that makes you drool long before the first bite.</dd>
+
+    <dt>Food not interesting you enough?</dt>
+    <dd>More of a nature person huh? That's perfectly fine! Korea has over 22 national parks for you to explore and take in, each better than the last! Explore the quiet woods, or the beautiful temples, I'm sure there's something for you here!</dd>
+
+    <dt>What about at night? What to do when the sun goes down?</dt>
+    <dd>Look no further! Korea has hundreds upon thousands of bars and clubs that are open until 5-6 in the morning!  If you want to experience an epic Korean bash, then the best place to get started is the Hongdae district in Seoul. This area has numerous underground clubs and bars where you can dance and play games until the sun comes up.</dd>
+
+    <dt>More of a water person?</dt>
+    <dd>Korea has over 3,000 islands that range from as big as cities, to uninhabited atolls that make you the king! The most popular being Jeju, which hosts beautiful volcanoes and waterfalls, and home to Korea's biggest mountain, Mount Hallasan.</dd>
+
+    <dt>Still not interested? More of a history buff I see...</dt>
+    <dd>Well let me tell you a bit about the DMZ! Since the Korean War, North and South Korea have been separate nations with hopes of one day reuniting, until then, you can see a bit of the history yourself at the DMZ, and step foot into North Korea, even if it's only a few feet.  </dd>
+
+    <dt>And for the kids?!</dt>
+    <dd>Korea is home to one of the largest indoor amusement parks in the world, Lotte World. Here you'll find roller coasters galore, as well as many arcade games to have you bringing home tons of prizes!</dd>
+
+    <dt>Listen, I know you like BTS...</dt>
+    <dd>Come see why this K-POP band is one of the largest groups in the world right now! With an infectious rhythm, I'm sure them, or the many other groups will get you off your feet dancing!</dd>
+</dl>
+<button>Show the Next FAQ</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+    // $('dd').addClass('invisible');
+    $('dd').addClass('highlight')
+    $('button').click(function (){
+    $('dt').next().toggleClass('invisible')
+    })
+
+    // $('dd').click(function(){
+    //     $(this).toggleClass('highlight')
+    // })
+
+    $('h3').click(function (){
+        $('body').toggleClass('bodycolor')
+        // $('dt').toggleClass('dtcolor')
+    })
+
+</script>
+
+
+</html>
