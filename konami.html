@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1 class="font">Konami Code</h1>
+
+<audio id="zelda">
+    <source src="Legend%20of%20Zelda%20Ocarina%20of%20Time_%20Title%20Screen.mp3">
+</audio>
+
+
+<!--// jQuery Code-->
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossOrigin="anonymous"></script>
+<script>
+    // $("body").css("background-image", "url(img/legend-of-zelda-ocarina-of-time-3d.original.jpg)").css("background-size", "cover");
+    $(".font").css("font-family", "'Press Start 2P', cursive").css("font-size", "70px").css("text-align", "center").css("color", "white").css("transform", "rotate(270deg)").css("transform-origin", "left top 0").css("float", "left").css("margin", "770px 0 0 150px");
+
+    "use strict";
+
+
+
+        var myKeys = '';
+
+        $('body').keyup(function (event) {
+            console.log(event.key);
+            myKeys += event.key
+            if (myKeys === "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter") {
+                //Adds 30 Lives
+                alert("You have added 30 lives!");
+                //Changes Background to Zelda
+                $("body").css("background-image", "url(img/legend-of-zelda-ocarina-of-time-3d.original.jpg)").css("background-size", "cover");
+                //Plays Zelda Music... a little too long though
+                $('audio#zelda')[0].play();
+            }
+        });
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
