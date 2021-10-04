@@ -26,3 +26,7 @@ $('li').hover( function (){
 function (){
     $('li').css('background-color', 'inherit')
 });
+
+$('.alertthep').click(function (){
+    alert("Looks like you've clicked the paragraph!");
+})
