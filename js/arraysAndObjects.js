@@ -10,6 +10,13 @@
  * Notes
  * All test arrays will have at least one element and are valid.
  */
+// function minMax (arr){
+//     var maxNum = Math.max(...arr)
+//     var minNum = Math.min(...arr)
+//     return [minNum, maxNum];
+// }
+//
+// console.log(minMax([10, 15, 2, 1, 51, 5]));
 
 
 /**
@@ -28,6 +35,25 @@
  * Numbers in the array should not repeat.
  * The original order must be maintained.
  */
+
+// var arr = [1, 2, 'a', 'b']
+// var arr2 = [1, "a", "b", 0, 15]
+// function filterArray (arr){
+//     // for (var i = 0; i < arr.length; i++) {
+//     //     if (Number.isInteger(arr[i])){
+//     //         return arr[i]
+//     //     }
+//     // }
+//     let filteredArray = arr.filter(function (value){
+//         if (typeof value !== 'string'){
+//             return value
+//         }
+//     })
+//     return filteredArray
+// }
+//
+// console.log(filterArray(arr));
+// console.log(filterArray(arr2));
 
 
 /**
@@ -135,23 +161,32 @@
  */
 
 
-/**
- * Get Sum of People's Budget
- * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
- *
- * Examples
- *
- * >> getBudgets([
- *        { name: "John", age: 21, budget: 23000 },
- *        { name: "Steve",  age: 32, budget: 40000 },
- *        { name: "Martin",  age: 16, budget: 2700 }
- *    ]) ➞ 65700
- * >> getBudgets([
- *        { name: "John",  age: 21, budget: 29000 },
- *        { name: "Steve",  age: 32, budget: 32000 },
- *        { name: "Martin",  age: 16, budget: 1600 }
- *    ]) ➞ 62600
- */
+
+ // * Get Sum of People's Budget
+ // * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ // *
+ // * Examples
+ // *
+// getBudgets([
+//     {name: "John", age: 21, budget: 23000},
+//     {name: "Steve", age: 32, budget: 40000},
+//     {name: "Martin", age: 16, budget: 2700}
+// ])
+// getBudgets([
+//     {name: "John", age: 21, budget: 29000},
+//     {name: "Steve", age: 32, budget: 32000},
+//     {name: "Martin", age: 16, budget: 1600}
+// ])
+//
+// function getBudgets(allbudget){
+//     var totalbudget = 0
+//     for (var i = 0; i < allbudget.length; i++){
+//          totalbudget += allbudget[i].budget
+//     }
+//     console.log(totalbudget);
+// }
+
+// console.log(getBudgets);
 
 
 /**
@@ -296,26 +331,26 @@
  *    ]) ➞ 11
  */
 
-function tellFortune(children,partner,place,job){
-console.log ("You will be a " + job + ", " + "with " + children + " children, " + "living in " + place + ", " + " while being married to " + partner + ".")
-}
-
-tellFortune(4, "Kayla", "Denver", "Web Developer");
-tellFortune(2, "Katia", "New York", "Baseball Player");
-
-function calculateDogAge(humanYears){
-    var dogYears = humanYears * 7
-    console.log("Your dog is " + dogYears + " in dog years!")
-}
-
-// console.log(calculateDogAge(4));
-calculateDogAge(6);
-calculateDogAge(2)
-
-function calculateSupply(age,amount){
-    var lifetime = parseFloat((100- age) * (amount * 365));
-
-    return ("You will need " + lifetime + " of your favorite snack " + "to last you until the ripe age of " + 100);
-}
-
-console.log(calculateSupply(25, 4));
+// function tellFortune(children,partner,place,job){
+// console.log ("You will be a " + job + ", " + "with " + children + " children, " + "living in " + place + ", " + " while being married to " + partner + ".")
+// }
+//
+// tellFortune(4, "Kayla", "Denver", "Web Developer");
+// tellFortune(2, "Katia", "New York", "Baseball Player");
+//
+// function calculateDogAge(humanYears){
+//     var dogYears = humanYears * 7
+//     console.log("Your dog is " + dogYears + " in dog years!")
+// }
+//
+// // console.log(calculateDogAge(4));
+// calculateDogAge(6);
+// calculateDogAge(2)
+//
+// function calculateSupply(age,amount){
+//     var lifetime = parseFloat((100- age) * (amount * 365));
+//
+//     return ("You will need " + lifetime + " of your favorite snack " + "to last you until the ripe age of " + 100);
+// }
+//
+// console.log(calculateSupply(25, 4));
