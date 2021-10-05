@@ -36,6 +36,15 @@
 
         }
     )
+    var popup = new mapboxgl.Popup().setHTML("<h6><em>Katii Thai Food Truck</em></h6>")
+
+    var marker = new mapboxgl.Marker({color: 'orange'}).setLngLat([-98.4865981,29.4505284]).addTo(map).setPopup(popup)
+
+
+    // var KatiiPopUp = new mapboxgl.Popup().setHTML('<p>Katii Thai Food</p>').addTo(map)
+
+
+
 </script>
 
 <!--<script src="js/mapbox-lecture-handout.js"></script>-->
