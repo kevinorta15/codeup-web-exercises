@@ -39,11 +39,18 @@
 // var arr = [1, 2, 'a', 'b']
 // var arr2 = [1, "a", "b", 0, 15]
 // function filterArray (arr){
-//     // for (var i = 0; i < arr.length; i++) {
-//     //     if (Number.isInteger(arr[i])){
-//     //         return arr[i]
-//     //     }
-//     // }
+//     let newArr = [];
+//     arr.forEach(function (cats){
+//         if (typeof cats === 'number'){
+//             newArr.push(cats)
+//         }
+//     })
+//     return newArr
+// }
+//
+// console.log(filterArray(arr));
+// console.log(filterArray(arr2));
+//
 //     let filteredArray = arr.filter(function (value){
 //         if (typeof value !== 'string'){
 //             return value
@@ -54,6 +61,9 @@
 //
 // console.log(filterArray(arr));
 // console.log(filterArray(arr2));
+
+//OR METHOD #3
+
 
 
 /**
@@ -323,13 +333,30 @@
  * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
  *
  * Examples
- *
- * >> totalPets([
- *       {name: 'Fernando Mendoza', pets: 1},
- *       {name: 'Douglas Hirsh', pets: 8},
- *       {name: 'Kenneth Howell', pets: 2}
- *    ]) ➞ 11
  */
+ var AllPets = [
+ {name: 'Fernando Mendoza', pets: 1},
+ {name: 'Douglas Hirsh', pets: 8},
+ {name: 'Kenneth Howell', pets: 2}
+ ]
+ //Total ➞ 11
+
+
+function totalPets(array) {
+    var petTotal = 0
+    array.forEach(function (elem) {
+        petTotal += elem.pets
+    })
+    return petTotal
+}
+//      for (var i = 0; i < allPets.length; i++){
+//          petTotal += allPets[i].pets
+//      }
+//     return petTotal
+// }
+
+console.log(totalPets(AllPets));
+
 
 // function tellFortune(children,partner,place,job){
 // console.log ("You will be a " + job + ", " + "with " + children + " children, " + "living in " + place + ", " + " while being married to " + partner + ".")
