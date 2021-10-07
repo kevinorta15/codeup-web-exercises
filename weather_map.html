@@ -15,7 +15,7 @@
             width: 100%;
         }
         #map {
-            width: 500px;
+            width: 100%;
             height: 500px;
             margin: auto;
         }
@@ -57,12 +57,12 @@
         </form>
     </div>
 </nav>
-<h1 id="five-day">Weather Five Day</h1>
+<h1 id="five-day" style="color: black">Weather Five Day</h1>
 
 <h2 id="table-header"></h2>
 
 <table>
-    <tr id="weather-table-row"></tr>
+    <tr id="weather-table-row" class="d-flex flex-row justify-content-between"></tr>
 </table>
 <!--<table>-->
 <!--    <tr id="weather-table-row2"></tr>-->
@@ -76,6 +76,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <!--MapBox CDN Below-->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
@@ -89,21 +90,81 @@
             container: "map",
             style: 'mapbox://styles/mapbox/outdoors-v11',
             center: [-98.4861, 29.4252],
-            zoom: 11
+            zoom: 12
 
         }
     )
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+//GLOBAL VAR TO BE ABLE TO ACCESS NAME IN REVERSE-GEOCODE
+    var Yourcityname = ''
+
+    $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: WeatherAPIkey,
         // id:     4726206, //You could use an ID instead of SA Query
-        q: "San Antonio, US", //You could also just search the name
-        // lat:    29.423017,
-        // lon:   -98.48527,
+        // q: "San Antonio, US", //You could also just search the name
+        lat:    29.423017,
+        lon:   -98.48527,
         units: 'imperial'
     }).done(function (data) {
-        $("#table-header").append(data.name + ", " + data.main.temp);
+
+        reverseGeocode({lat: 29.423017, lng: -98.48527}, mapBoxAPIkey).then(function(results) {
+            // do something with results
+            Yourcityname = results
+            console.log(results);
+            //Parse in details from Data into HTML
+            $("#table-header").append("<span style='color: black'>Your Location: </span>" + '<br>' + Yourcityname + '<br>' + "<span style='color: black'>Today's Temperature:</span> " + '<br>' + parseInt(data.current.temp) + ' °F' + '<br>' + "<span style='color: black'>Your Current Time: </span>" + convert(data.current.dt));
+        })
         console.log(data);
+
+        //EMPTIES THE DATA
+        $("#table-header").text("");
+        $("#weather-table-row").text("");
+        $("#weather-table-row2").text("");
+
+        //5 DAY WEATHER INFO - CARD FUNCTIONALITY
+        var days = 0
+        for (var i = 0; i < 5; i += 1){
+            $("#weather-table-row").append(
+                "<div>"
+                + "<div class='d-flex flex-column card-header' style='background-color: #57CC99'>" +
+                "Date: " + convert(data.daily[i].dt) + "</div>" +
+                "<div class='list-group list-group-flush'>" +
+                "<div class='list-group-item'>" + "Description: " + "</div>" +
+                "<div class='list-group-item'>" + "Humidity: " + "</div>" +
+                "<div class='list-group-item'>" + "Wind : " + "</div>" +
+                "<div class='list-group-item'>" + "Pressure: " + "</div>" +
+                "</div>" +
+                "</div>"
+            )
+        }
+
     });
+
+
+    //CONVERTS DT FROM DATA TO TIME
+    function convert(time){
+        let months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'August', 'Sep', 'Oct', 'Nov', 'Dec']
+        var date = new Date(time*1000);
+        var year = date.getFullYear();
+        var day = date.getDate();
+        var month = months_arr[date.getMonth()];
+        var hours = date.getHours();
+
+         return month  + ', ' + day + ', ' + year
+    }
+
+    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    //     APPID: WeatherAPIkey,
+    //     // id:     4726206, //You could use an ID instead of SA Query
+    //     q: "San Antonio, US", //You could also just search the name
+    //     // lat:    29.423017,
+    //     // lon:   -98.48527,
+    //     units: 'imperial'
+    // }).done(function (data) {
+    //     $("#weather-table-row").append(data.name + ", " );
+    //     console.log(data);
+    // });
+
+
 </script>
 </body>
 </html>
