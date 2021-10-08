@@ -128,6 +128,7 @@
                 + "<div class='d-flex flex-column card-header' style='background-color: #57CC99'>" +
                 "Date: " + convert(data.daily[i].dt) + "</div>" +
                 "<div class='list-group list-group-flush'>" +
+                "<div class='list-group-item'>" + "<img src='http://openweathermap.org/img/w/" + data.daily[i].weather[0].icon + ".png'" + "</div>" +
                 "<div class='list-group-item'>" + "Description: " + data.daily[i].weather[0].description + "</div>" +
                 "<div class='list-group-item'>" + "Humidity: " + data.daily[i].humidity + "%" + "</div>" +
                 "<div class='list-group-item'>" + "Wind : " + parseInt(data.daily[i].wind_speed) + " mph" + "</div>" +
