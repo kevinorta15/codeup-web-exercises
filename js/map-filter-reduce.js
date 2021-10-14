@@ -73,8 +73,15 @@ console.log(longestEmail);
 
 //TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-let listofUsers = users.reduce((object, single) => {
-    return object + single.name + ', '
-}, "The instructors are: ");
+// let listofUsers = users.reduce((object, single, index) => {
+//     if (index !== users.length-1) {
+//         return object + single.name + ', '
+//     }
+//     return object + single.name + '.'
+// }, "The instructors are: ");
+
+let listofUsers = users.map((user) => {
+    return user.name
+}).join(', ')
 
 console.log(listofUsers);
