@@ -8,7 +8,6 @@ $(document).ready(function (){
             .then(function(results){
                 console.log(results)
                 results.json()
-
                     .then((resultsArray) => {
                         console.log(resultsArray); //see exactly what we get back, and take commit time from this
                         console.log("created Date and Time: " + new Date (resultsArray[0].created_at));
